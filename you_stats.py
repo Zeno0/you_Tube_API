@@ -1,6 +1,7 @@
 import requests
 import csv
 from datetime import datetime
+import os
 
 # 🔹 Replace with your actual API key
 API_KEY = "AIzaSyCkHqOelqQVvtYRQx8vUAuE-HP5fFqHGD0"
@@ -35,3 +36,15 @@ if "items" in data and data["items"]:
 
 else:
     print("❌ Invalid Video ID or API Limit Exceeded")
+
+
+# Git commit function
+def commit_and_push():
+    os.system("git config --global user.email 'github-actions@github.com'")
+    os.system("git config --global user.name 'GitHub Actions'")
+    os.system("git add youtube_stats.csv")
+    os.system('git commit -m "Updated YouTube stats"')
+    os.system("git push")
+
+# Run commit after fetching stats
+commit_and_push()
