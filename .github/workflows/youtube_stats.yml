@@ -31,4 +31,7 @@ jobs:
            git diff --staged --quiet || (git commit -m "Updated YouTube stats" && git push)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: List files
+        run: ls -la
+
 
