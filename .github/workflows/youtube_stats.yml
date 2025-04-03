@@ -1,0 +1,24 @@
+name: YouTube Stats Automation
+
+on:
+  schedule:
+    - cron: "0 12 * * *"  # Runs daily at 12:00 PM UTC
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run YouTube Stats Script
+        run: python youtube_stats.py
