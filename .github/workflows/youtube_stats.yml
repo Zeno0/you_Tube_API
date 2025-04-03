@@ -34,4 +34,19 @@ jobs:
       - name: List files
         run: ls -la
 
-
+      - name: Commit CSV to GitHub
+        run: |
+         git config --global user.email "github-actions@github.com"
+         git config --global user.name "GitHub Actions"
+         git add -A
+         git commit -m "Updated YouTube stats" || echo "No changes to commit"
+         git push
+      - name: Push changes
+        run: |
+           git pull origin main  # Pull latest changes
+           git push
+        env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
+  
+  
