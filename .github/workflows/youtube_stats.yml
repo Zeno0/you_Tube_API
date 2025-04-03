@@ -27,6 +27,8 @@ jobs:
            git config --global user.email "github-actions@github.com"
            git config --global user.name "GitHub Actions"
            git add youtube_stats.csv
-           git commit -m "Updated YouTube stats"
-           git push
+    
+           git diff --staged --quiet || (git commit -m "Updated YouTube stats" && git push)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
