@@ -21,4 +21,4 @@ jobs:
         run: pip install requests
 
       - name: Run YouTube Stats Script
-        run: python youtube_stats.py
+        run: python you_stats.py
