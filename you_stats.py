@@ -7,7 +7,6 @@ API_KEY = "AIzaSyCkHqOelqQVvtYRQx8vUAuE-HP5fFqHGD0"
 
 # 🔹 Replace with the YouTube Video ID you want to track
 VIDEO_ID = "dQw4w9WgXcQ"  
-AIzaSyCkHqOelqQVvtYRQx8vUAuE-HP5fFqHGD0
 # Construct the API request URL
 url = f"https://www.googleapis.com/youtube/v3/videos?part=statistics&id={VIDEO_ID}&key={API_KEY}"
 
