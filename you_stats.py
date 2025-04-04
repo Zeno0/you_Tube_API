@@ -7,7 +7,8 @@ import os
 API_KEY = "AIzaSyCkHqOelqQVvtYRQx8vUAuE-HP5fFqHGD0"
 
 # 🔹 Replace with the YouTube Video ID you want to track
-VIDEO_ID = "dQw4w9WgXcQ"  
+# updated video id of anime awards fPr4jUsByDQ&t
+VIDEO_ID = "fPr4jUsByDQ&t"  
 # Construct the API request URL
 url = f"https://www.googleapis.com/youtube/v3/videos?part=statistics&id={VIDEO_ID}&key={API_KEY}"
 
