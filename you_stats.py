@@ -5,7 +5,8 @@ import os
 
 # 🔹 Your YouTube API Key
 API_KEY = os.environ.get('GOOGLE_API')
-VIDEO_ID = "fPr4jUsByDQ&t"
+# VIDEO_ID = "fPr4jUsByDQ&t" # crunchyroll anime awards
+VIDEO_ID = "rACLlmnM-IM"
 # CHANNEL_ID = "YOUR_CHANNEL_ID"  # You can extract from video data
 
 # 🔹 Fetch Video Statistics
